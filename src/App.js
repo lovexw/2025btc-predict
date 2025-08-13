@@ -92,6 +92,15 @@ function App() {
       </div>
       <div className="prediction-form">
         <h1>比特币2025年价格预测</h1>
+        <div className="announcement">
+          <p>📢 预测说明：</p>
+          <ul>
+            <li>本预测仅供娱乐参考，不构成投资建议</li>
+            <li>预测结果仅代表个人观点</li>
+            <li>加密货币市场波动较大，请理性看待</li>
+            <li>欢迎分享你的预测，一起见证2025年比特币最终的价格！</li>
+          </ul>
+        </div>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="nickname">昵称:</label>
@@ -105,15 +114,15 @@ function App() {
           </div>
           
           <div className="form-group">
-            <label htmlFor="prediction">预测价格: ${prediction.toLocaleString()}</label>
+            <label htmlFor="prediction">预测价格: ${Number(prediction).toLocaleString('en-US')}</label>
             <input
               id="prediction"
               type="range"
               min="50000"
               max="500000"
-              step="10000"
+              step="1000"
               value={prediction}
-              onChange={(e) => setPrediction(Number(e.target.value))}
+              onChange={(e) => setPrediction(e.target.value)}
             />
           </div>
           
