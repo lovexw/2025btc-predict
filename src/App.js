@@ -97,7 +97,7 @@ function App() {
           <ul>
             <li>本预测仅供娱乐参考，不构成投资建议</li>
             <li>预测结果仅代表个人观点</li>
-            <li>加密货币市场波动较大，请理性看待</li>
+            <li>加密货币市场波动较大，请理性查看</li>
             <li>欢迎分享你的预测，一起见证2025年比特币最终的价格！</li>
           </ul>
         </div>
@@ -135,6 +135,11 @@ function App() {
       {/* 预测墙显示 */}
       <div className="predictions-wall">
         <h2>预测墙</h2>
+        {predictions.length > 0 && (
+          <div className="average-price">
+            平均预测: ${calculateAveragePrice(predictions).toLocaleString('en-US')}
+          </div>
+        )}
         {message && <div className="message">{message}</div>}
         {predictions.length > 0 ? (
           <table>
@@ -176,3 +181,15 @@ function App() {
 }
 
 export default App;
+
+// 在组件顶部添加计算函数
+const calculateAveragePrice = (data) => {
+  const validPredictions = data
+    .map(item => Number(item.prediction))
+    .filter(price => !isNaN(price) && price > 0);
+  
+  if (validPredictions.length === 0) return 0;
+  
+  const sum = validPredictions.reduce((acc, price) => acc + price, 0);
+  return Math.round(sum / validPredictions.length);
+};

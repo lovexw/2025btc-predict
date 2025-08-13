@@ -81,31 +81,68 @@ button:hover {
 
 
 .predictions-wall {
-  margin-top: 2rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto;
+  max-width: 900px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.predictions-wall h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #f7931a;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.predictions-wall h2:before,
+.predictions-wall h2:after {
+  content: "✦";
+  color: #f7931a;
+  margin: 0 10px;
+}
+
+.average-price {
+  text-align: center;
+  background: linear-gradient(135deg, #f7931a, #ffab38);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 auto 20px;
+  display: block;
+  width: fit-content;
+  box-shadow: 0 2px 8px rgba(247, 147, 26, 0.3);
+}
+
+.predictions-wall {
+  text-align: center;
 }
 
 .predictions-wall table {
   width: 100%;
-  border-collapse: collapse;
-}
-
-.predictions-wall th, 
-.predictions-wall td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .predictions-wall th {
-  background-color: #f7931a;
+  background: #f7931a;
   color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+.predictions-wall td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
 }
 
 .predictions-wall tr:hover {
-  background-color: #f5f5f5;
+  background: rgba(247, 147, 26, 0.05);
 }
 
 .error-message {
@@ -157,79 +194,15 @@ button:hover {
 /* 预测墙标题样式 */
 .predictions-wall h2 {
   text-align: center;
-  color: #f7931a;
-  font-size: 24px;
-  margin: 20px 0;
-  padding: 10px;
-  background: rgba(247, 147, 26, 0.1);
-  border-radius: 8px;
-  position: relative;
 }
 
-.predictions-wall h2::before,
-.predictions-wall h2::after {
-  content: "✦";
-  color: #f7931a;
-  margin: 0 10px;
-}
-
-.announcement {
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  padding: 15px;
-  margin: 20px 0;
-  color: #6c757d;
-}
-
-.announcement ul {
-  padding-left: 20px;
-  margin: 10px 0;
-}
-
-.announcement li {
-  margin-bottom: 8px;
-}
-
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-  
-  h1 {
-    font-size: 1.5rem;
-  }
-  
-  .price-slider {
-    width: 100%;
-  }
-  
-  .prediction-form {
-    flex-direction: column;
-  }
-  
-  .predictions-wall {
-    font-size: 0.9rem;
-  }
-  
-  .predictions-wall table {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .current-price {
-    font-size: 1.2rem;
-  }
-  
-  input[type="range"] {
-    width: 100%;
-  }
-  
-  button {
-    width: 100%;
-    margin-top: 10px;
-  }
+.average-price {
+  text-align: center;
+  background: #f7931a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: 10px auto;
+  display: inline-block;
 }
