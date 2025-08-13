@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [nickname, setNickname] = useState('');
-  const [prediction, setPrediction] = useState(100000);
+  const [prediction, setPrediction] = useState(120000);
   const [predictions, setPredictions] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -91,7 +91,7 @@ function App() {
         )}
       </div>
       <div className="prediction-form">
-        <h1>比特币2025年价格预测</h1>
+        <h1>比特币2025年牛市价格预测</h1>
         <div className="announcement">
           <p>📢 预测说明：</p>
           <ul>
@@ -118,7 +118,7 @@ function App() {
             <input
               id="prediction"
               type="range"
-              min="50000"
+              min="120000"
               max="500000"
               step="1000"
               value={prediction}
