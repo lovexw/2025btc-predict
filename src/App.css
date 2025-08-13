@@ -78,3 +78,77 @@ button:hover {
   color: #f7931a;
   margin-top: 0.5rem;
 }
+
+
+.predictions-wall {
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.predictions-wall table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.predictions-wall th, 
+.predictions-wall td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.predictions-wall th {
+  background-color: #f7931a;
+  color: white;
+}
+
+.predictions-wall tr:hover {
+  background-color: #f5f5f5;
+}
+
+.error-message {
+  color: #ff3333;
+  margin: 1rem 0;
+}
+
+.price-display {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.price-display h2 {
+  margin: 0 0 10px 0;
+  color: #f7931a;
+}
+
+.price-display p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.app-footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #f7931a;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
